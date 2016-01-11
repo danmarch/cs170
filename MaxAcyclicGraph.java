@@ -54,9 +54,7 @@ public class MaxAcyclicGraph {
 
 		//List for iterating through the set of vertices.
 		List<Integer> vertexList = new ArrayList<Integer>();
-
 		List<int[]> firstList = new ArrayList<int[]>();
-
 		List<int[]> secondList = new ArrayList<int[]>();
 
 		//Iterates through the adjacency matrix. Converts it to adjacency lists for easier
@@ -159,9 +157,7 @@ public class MaxAcyclicGraph {
 
 		//List for iterating through the set of vertices.
 		List<Integer> vertexList2 = new ArrayList<Integer>();
-
 		List<int[]> firstList2 = new ArrayList<int[]>();
-
 		List<int[]> secondList2 = new ArrayList<int[]>();
 
 		//Iterates through the adjacency matrix. Converts it to adjacency lists for easier
@@ -267,17 +263,15 @@ public class MaxAcyclicGraph {
 		return inputList;
 	}
 
-	public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException, IOException {
-
+	public static void main(String[] args) {
 		Writer writer = null;
-
 		try {
 		    writer = new BufferedWriter(new OutputStreamWriter(
 		          new FileOutputStream("AndHisNameIsJohnCena.out"), "utf-8"));
 		    for(int i= 1; i <= 621; i++) {
-			solve("./instances/" + Integer.toString(i) + ".in", args[1], writer);
-			System.out.println(i);
-		}
+			  		solve("./instances/" + Integer.toString(i) + ".in", args[1], writer);
+						System.out.println(i);
+					}
 		} catch (IOException ex) {
 		  // report
 		} finally {
@@ -286,7 +280,7 @@ public class MaxAcyclicGraph {
 
 	}
 
-	public static void solve(String in, String out, Writer writer) throws FileNotFoundException, UnsupportedEncodingException, IOException {
+	public static void solve(String in, String out, Writer writer) throws IOException {
 
 		File input = new File(in);
 		File output = new File(out);
@@ -345,4 +339,5 @@ public class MaxAcyclicGraph {
 		writer.write(newList);
 
 	}
+
 }
