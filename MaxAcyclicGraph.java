@@ -49,7 +49,7 @@ public class MaxAcyclicGraph {
 
 	public static List<Integer> firstSolver(int[][] arr) {
 
-		//Map from vertices (as integers) to
+		//Map from vertices (as integers) to ArrayLists of integers.
 		HashMap<Integer,ArrayList<Integer>> edgeMap = new HashMap<Integer,ArrayList<Integer>>();
 
 		//List for iterating through the set of vertices.
@@ -92,7 +92,7 @@ public class MaxAcyclicGraph {
 		List<Integer> sortedList = new ArrayList<Integer>();
 		Set<Integer> noInc = new HashSet<Integer>();
 		List<Integer> noIncList = new ArrayList<Integer>();
-		HashSet<Integer> secondElms = new HashSet<Integer>();
+		Set<Integer> secondElms = new HashSet<Integer>();
 
 		for (int[] listElm : firstList) {
 			secondElms.add(listElm[1]);
